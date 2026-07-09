@@ -23,8 +23,8 @@
 
 The subject line / headline of the application should be engaging and specific, not generic.
 
-**Bad:** "Application for Sales Engineer Position" / "Ansogning til stilling som ingeniør"
-**Good:** "[Your specialty] specializing in [relevant keyword from posting]"
+**Bad:** "Application for Mechanical Engineer Position"
+**Good:** "[Your specialty] specializing in [relevant keyword from posting]" (e.g. "Mechanical design engineer specializing in thermal battery CFD/FEA")
 
 Formula: **[Title/education] + [relevant keyword from the job posting]**
 
@@ -83,10 +83,16 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 
 ## Language for Different Role Types
 
-### Technical/ML roles
-- Lead with programming languages, ML frameworks, specific model architectures
-- Mention datasets, data volumes, pipeline complexity
-- Include independent projects
+### Mechanical / Design & CAE engineering roles
+- Lead with CAD and CFD/FEA tooling and the standards you design to: Siemens NX, SolidWorks, ANSYS Fluent, OpenFOAM, plus MIL-STD-810H and MIL-STD-461G qualification.
+- Quantify manufacturing and reliability outcomes: prototype-iteration cuts (30% fewer iterations from validated CFD/FEA strategies), error and manual-effort reduction (90% via digitized design-to-production traceability), and throughput gains (30% from assembly automation).
+- Frame Python, MATLAB, and C++ as engineering-automation and simulation tooling (process-data digitization, IoT and glovebox control, OpenFOAM thermal scripting), not general software development.
+- Cite qualification and compliance work (environmental qualification testing, MIL-STD compliance) and design-to-manufacturing experience (DFM, tolerance stack-up, production jigs and fixtures, end-to-end design-to-production traceability).
+
+### Automation / mechatronics roles
+- Lead with the embedded and automation stack: ESP32, custom PCBs, IoT process control, and the systems they run (glovebox and assembly automation)
+- Frame Python, MATLAB, and C++ as control, scripting, and simulation tooling, with the outcome they drove (throughput, error elimination, traceability)
+- Include the independent projects that show end-to-end build (robotic assembly guidance, OpenFOAM thermal modeling)
 
 ### Domain-specific roles
 - Lead with domain expertise and specific methods

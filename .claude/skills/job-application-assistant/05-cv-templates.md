@@ -1,5 +1,7 @@
 # CV Templates and Tailoring Guide
 
+> **ACTIVE CV SYSTEM (2026-07): resumes are generated from the polished JSON->LaTeX resume repo at `/home/pranay/projects/resume`, not the moderncv template in this guide.** Per application, create `resume/applications/<company>_<role-slug>/` with a tailored `resume.json` + `config.json`, build via `./applications/build.sh <slug>`, and write `notes.md`. See `CLAUDE.md` -> "Resume Generation" and `resume/applications/README.md`. The moderncv guidance below is retained as a **legacy fallback** only.
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -25,50 +27,60 @@ Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
-
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
-    pdfpagemode=FullScreen,
-}
-\usepackage[scale=0.77]{geometry}
+\usepackage{needspace}
+\usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
+% moderncv loads hyperref itself, so a second \usepackage{hyperref} triggers
+% "Option clash for package hyperref" (fatal under -halt-on-error). Configure it
+% with \hypersetup instead. Defer both the hyperref config and the blue
+% name/section-heading overrides to \AtBeginDocument so they run after moderncv
+% has defined its style hooks: moderncv 2.3.x (TeX Live) styles the whole name
+% through \namestyle, while some MiKTeX builds expose \firstnamestyle/\lastnamestyle.
+% \providecommand makes each hook exist first (harmless where unused), then
+% \renewcommand paints it in color1 (blue). Without this the name and section
+% headings render black, inconsistent with the blue links, bullets, and icons.
+\AtBeginDocument{%
+  \hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue,%
+    pdftitle={Pranay Kiran - CV},pdfpagemode=FullScreen}%
+  \providecommand*{\namestyle}[1]{#1}%
+  \renewcommand*{\namestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \providecommand*{\firstnamestyle}[1]{#1}%
+  \renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \providecommand*{\lastnamestyle}[1]{#1}%
+  \renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}%
+}
+
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\name{Pranay}{Kiran}
+\address{Hyderabad, Telangana, India}{}{} % location confirmed by candidate
+\phone[mobile]{+91-9676504552}
+\email{kiranpranay12@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/pranaykiran/}{LinkedIn}, \href{https://github.com/KiranPranay}{GitHub}, \href{https://pranay.cottonseeds.org}{Portfolio}}
 
 \begin{document}
 \makecvtitle
 
 % 1. Profile statement (1-3 sentences, tailored per role)
 % 2. Skills section
-% 3. Education section
-% 4. Professional Experience section
-% 5. Selected Publications (if applicable)
-% 6. Honors and Awards (if applicable)
-% 7. References
+% 3. Professional Experience section
+% 4. Selected Projects section
+% 5. Education section
+% 6. References
 
 \end{document}
 ```
 
 ### Color overrides
 
-The three `\renewcommand*` lines in the preamble are required on lualatex+MiKTeX. Without them the firstname, lastname, and section headings render in black even though `\moderncvcolor{blue}` is set, which looks inconsistent with the rest of the blue accent scheme (links, bullet markers, contact icons). The override forces all three to use `color1` (moderncv's accent colour, which becomes blue under `\moderncvcolor{blue}`). Both names render bold; if you prefer the firstname in regular weight, change the firstnamestyle override from `\bfseries` to `\mdseries`. Don't drop the override - on most modern installs the defaults render visibly wrong.
+The `\namestyle` / `\sectionstyle` overrides in the `\AtBeginDocument` block force the name and section headings to `color1` (moderncv's accent colour, blue under `\moderncvcolor{blue}`). Without them, default banking leaves the name and headings black even though `\moderncvcolor{blue}` is set, inconsistent with the blue links, bullet markers, and contact icons. Two things make the override portable and robust, and both matter:
+
+- **Defer to `\AtBeginDocument`.** moderncv defines its name/section style hooks during document start-up, so a bare `\renewcommand*{\namestyle}` in the preamble errors with `command undefined`. Running the overrides at `\AtBeginDocument` (which still fires before `\makecvtitle`) fixes this.
+- **Guard with `\providecommand`, and cover both hook names.** moderncv 2.3.x on TeX Live styles the whole name through `\namestyle`; some MiKTeX builds instead expose `\firstnamestyle`/`\lastnamestyle`. Defining all three with `\providecommand` first means the override applies on whichever build you compile on and is a harmless no-op on the others.
+
+The name renders bold; for a regular-weight first name on a MiKTeX build, change `\firstnamestyle`'s `\bfseries` to `\mdseries`. Do **not** add a second `\usepackage{hyperref}` (moderncv already loads it, and the duplicate is a fatal option clash under `-halt-on-error`); configure links through the `\hypersetup` inside the same block.
 
 ### Spacing inside itemize lists (important)
 
@@ -105,12 +117,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Mechanical Design Engineer roles:**
+> Mechanical design engineer who takes high-temperature structural components from CAD model to qualified production part. Builds detailed models in Siemens NX and SolidWorks, runs tolerance stack-up analyses, and designs the jigs, fixtures, and test equipment that make a design manufacturable. Works from a design-for-manufacturability mindset on defense-grade lithium thermal battery hardware, so a new design reaches the line with minimal rework.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For CAE / CFD-FEA Simulation Engineer roles:**
+> Simulation engineer who uses CFD and FEA to cut prototype iterations, not just produce plots. Established repeatable, validated thermal and structural simulation strategies with ANSYS Fluent and OpenFOAM that reduced prototype iterations by 30% and improved design-verification accuracy, correlating transient thermal models against experimental testing. Currently completing an M.Tech in Aerospace Engineering, bringing thermal, fluid, vibration, and fatigue analysis into early component-design decisions.
+
+**For Manufacturing / NPD Engineer roles:**
+> Manufacturing and new-product-development engineer who established a defense-grade lithium thermal battery production line from the ground up, including inert gloveboxes, argon circulation, and processes compliant with MIL-STD-810H and MIL-STD-461G. Digitized process parameters to give end-to-end design-to-production traceability, cutting manual effort and errors by 90%, and led automation and IoT integration that reduced operator dependency. Delivers the fixtures, environmental qualification testing, and controls that move a product from R&D into repeatable manufacture.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
@@ -125,7 +139,7 @@ List **5-7 key competencies** in bullet format, tailored to the specific job. Fo
 ### Professional Experience
 - Rewrite bullet points to emphasize aspects most relevant to the target role
 - Use 4-6 bullets for most recent role, 3-4 for previous, 2-3 for older
-- **Emphasize measurable results** where possible: "Reduced processing time by X%", "Model adopted by the team"
+- **Emphasize measurable results** where possible: "Reduced prototype iterations by 30%", "Cut manual effort and errors by 90%"
 
 ### Handling Employment Gaps (Best Practice)
 If there is a gap in your employment history:
@@ -240,19 +254,18 @@ Cut the lowest-total-score line first, regardless of which section it sits in.
 
 The section order varies by role type:
 
-**For technical / data science / ML roles:**
+**For early-career design / simulation / specialist roles (default):**
 1. Profile statement / elevator pitch
 2. Core competencies / Skills
 3. Professional Experience (reverse chronological)
-4. Education (reverse chronological)
-5. Languages
-6. Publications & Awards
-7. References
+4. Selected Projects
+5. Education (reverse chronological)
+6. References
 
-**For domain-specific / specialist roles:**
+**For roles where the in-progress M.Tech (Aerospace) is the key qualifier:**
 1. Profile statement / elevator pitch
 2. Core competencies / Skills
 3. Education (reverse chronological) - credentials are a key qualifier
 4. Professional Experience (reverse chronological)
-5. Publications & Awards
+5. Selected Projects
 6. References

@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Pranay Kiran
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+<!-- Tailored for Pranay Kiran from Pranay_Kiran_Resume_mechanical.pdf. Re-run /setup to regenerate from documents/. -->
+<!-- Confirmed by candidate 2026-07-09: location (Hyderabad), languages, target roles, LinkedIn. Still [INFERRED] (unconfirmed): the behavioral profile, relocation appetite beyond Hyderabad, and other motivation/deal-breaker specifics. -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Pranay Kiran, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +13,102 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+<!-- Populated from the resume. Edit directly or re-run /setup. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Pranay Kiran
+- **Location:** Hyderabad, Telangana, India (open to Bengaluru, Pune, Chennai, and select remote/India-wide roles [INFERRED relocation appetite])
+- **Languages:** English (professional), Telugu (native), Hindi (professional)
+- **Status:** Employed full-time as a Design & Development Engineer while completing an M.Tech (Aerospace) [current employment inferred from the 2023-Present role]
+- **Email:** kiranpranay12@gmail.com
+- **Phone:** +91-9676504552
+- **Portfolio:** https://pranay.cottonseeds.org
+- **GitHub:** https://github.com/KiranPranay
+- **LinkedIn:** https://www.linkedin.com/in/pranaykiran/
+- **LinkedIn headline:** "Mechanical Design Engineer | Thermal Batteries | CFD/FEA"
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **M.Tech in Aerospace Engineering** (in progress, expected 2026) - Malla Reddy College of Engineering and Technology, Hyderabad
+- **B.Tech in Mechanical Engineering** (2019-2023) - MLR Institute of Technology, Hyderabad
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Design & Development Engineer (Mechanical)** (2023 - Present) - **Renewable Energy Systems Limited**, Aerospace & Defense Thermal Battery Division (Hyderabad, India)
+  - Established a defense-grade lithium thermal battery manufacturing facility with inert gloveboxes, argon circulation systems, and controlled production processes compliant with MIL-STD-810H and MIL-STD-461G.
+  - Established repeatable, validated CFD/FEA simulation strategies for thermal and structural performance of battery components, reducing prototype iterations by 30% and improving design-verification accuracy.
+  - Digitized process parameters and production data for end-to-end design-to-production traceability, reducing manual effort and errors by 90%.
+  - Designed production jigs, fixtures, and test equipment for manufacturing and environmental qualification testing; develops CAD models, tolerance stack-up analyses, and FEA for high-temperature structural components.
+  - Leads automation and IoT integration projects for inert glovebox and process systems to improve manufacturability.
+- **Intern** (2022) - **Bharat Heavy Electricals Limited (BHEL)** (India)
+  - Trained in manufacturing processes and quality control for steam-turbine production.
+  - Assisted in the design and analysis of turbine components using CAD and FEA tools.
+- **General Secretary** (2021-2023) - **Service to Mankind (NGO)**
+  - Established and led NGO operations supporting underprivileged children through educational and healthcare initiatives, facilitating 300+ blood donations and multiple medical-assistance programs (community impact, not a formal award).
+  - Built the NGO's operational infrastructure: constitution, an open-source website, and an administrative dashboard with transparent donation tracking.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Mechanical Design, Thermal & Fluid Systems, CFD, FEA, Design for Manufacturability (DFM)
+- **Secondary:** Automation & IoT integration, Tolerance stack-up, Vibration & Fatigue analysis, Project Management, Vendor Management, Regulatory Compliance (MIL-STD)
+- **Domain:** Defense/aerospace-grade lithium thermal batteries, MIL-STD-810H / MIL-STD-461G qualification, glovebox/argon inert systems, environmental qualification testing
+- **Software:** Siemens NX, SolidWorks, ANSYS Fluent, Fusion 360, FreeCAD, AutoCAD, OpenFOAM, MATLAB, Python, C++, Gmsh, Git, Linux
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- None currently
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- None
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- Self-assessment / inference only. No formal PI/DISC/MBTI assessment on file. -->
+- **Hands-on builder** [self-assessment] - takes work from R&D through to production, e.g. standing up a full lithium thermal-battery line and its automation.
+- **Rigorous and standards-driven** [self-assessment] - operates to MIL-STD qualification and validated CFD/FEA methods correlated with physical test data.
+- **Strengths:** simulation-to-hardware validation, process digitization, automation/IoT integration, cross-functional and vendor coordination.
+- **Thrives in:** [INFERRED] hands-on R&D-to-production environments where design, simulation, and manufacturing meet.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+<!-- What motivates you professionally. [INFERRED] from experience and stated direction; confirm with candidate. -->
+- [INFERRED] Turning simulation and R&D into validated, manufacturable hardware, especially thermal and energy-storage systems.
+- [INFERRED] Aerospace/defense and EV/battery work that pairs CFD/FEA with real qualification testing and automation.
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+<!-- Industries and roles being targeted (confirmed 2026-07-09). -->
+- **Aerospace & Defense**: design and CAE roles aligned with the in-progress M.Tech (Aerospace).
+- **EV / Battery / Energy storage**: battery and energy-storage design engineering.
+- **Automotive & Heavy engineering**: mechanical design, thermal/R&D, NPD.
+- **R&D labs**: CFD/FEA simulation and thermal engineering.
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+<!-- Hard constraints on job search. Not stated on the resume; the following are [INFERRED] and must be confirmed with the candidate. -->
+- [INFERRED] Location: prefers Hyderabad-based or hybrid roles; open to Bengaluru, Pune, Chennai, and select remote/India-wide roles. Relocation appetite unconfirmed.
+- [INFERRED] Should not require abandoning the in-progress M.Tech (Aerospace, expected 2026).
 
 ## Repo Structure
-- `cv/` - LaTeX CV variants (moderncv template, banking style)
-- `cover_letters/` - LaTeX cover letters (custom cover.cls template)
+- `cv/` - **legacy** moderncv CV variants (superseded by the resume repo below; kept for reference only)
+- `cover_letters/` - LaTeX cover letters (custom cover.cls template) - still the cover-letter source
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job search CLI tools
+
+## Resume Generation (external repo - the active CV system)
+Resumes are generated from Pranay's polished JSON->LaTeX resume repo, **not** the legacy moderncv template in `cv/`.
+
+- **Repo:** `/home/pranay/projects/resume` (template `templates/spidy.tex`, single-column IBM Plex Sans; `render.py` substitutes `<<TOKENS>>` from a data JSON; `latexmk` compiles).
+- **Master data:** `data/re.json` (source of the polished mechanical resume). Tailor a *copy* per application; never fabricate beyond the profile.
+- **Per-application folder:** `resume/applications/<company>_<role-slug>/` containing `resume.json` (tailored data), `config.json` (`outdir` = this folder), `job.md` (the posting text + an `**Apply:**` URL), `notes.md` (posting URL, fit eval, requirement coverage, tailoring + honesty notes, status), `interview.md` (role-specific interview prep), the built `<Name>_Resume_<Company>.{tex,pdf}` and `<Name>_CoverLetter_<Company>.{tex,pdf}` (cover letter authored in this ai_job repo, PDF copied in), and a generated `index.html` (self-contained interactive briefing: job post + notes + interview + résumé + cover, tabbed, theme-aware, with a prominent Apply link).
+- **Build:** from the resume repo root, `./applications/build.sh <slug>` (renders + compiles + cleans, then regenerates `index.html` via `applications/make_index.py`; `render.py` is stdlib-only, no venv needed).
+- **Bullet order:** `render.py` emits a role's `impact` list before its `responsibilities`; to control order, put bullets in `impact`.
+- Full convention: `resume/applications/README.md`.
 
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. Present this assessment to the user before proceeding.
-3. If good fit: create targeted CV (`cv/main_<company>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
+3. If good fit: create the application folder `resume/applications/<company>_<role>/`, write a tailored `resume.json` + `config.json`, build the resume, draft the cover letter (`cover_letters/cover_<company>_<role>.tex`), and copy the built cover-letter PDF into the application folder. Write `notes.md`.
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
@@ -107,7 +130,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Nice-to-have requirements are highlighted where there is a match
 
 ### Consistency
-- [ ] CV follows the standard 2-page moderncv/banking format
+- [ ] Resume follows the polished 2-page single-column format from the resume repo (built via `render.py` + `latexmk`)
 - [ ] Cover letter uses cover.cls template and established structure
 - [ ] Tone is consistent across CV and cover letter
 - [ ] No contradictions between CV and cover letter content
@@ -121,7 +144,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 
 ### Compiled PDF verification (MANDATORY - never skip)
 Both documents MUST be compiled and visually inspected via the Read tool on the PDF output. "Looks fine in the .tex" is not acceptable - LaTeX page-break decisions are unpredictable. Iterate until these all pass:
-- [ ] CV compiled with **lualatex** (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors). Cover letter compiled with **xelatex** (cover.cls requires fontspec).
+- [ ] Resume built via the resume repo (`./applications/build.sh <slug>` -> `render.py` + **latexmk -xelatex**); single-column, so ATS reading order is safe. Cover letter compiled with **xelatex** (cover.cls requires fontspec).
 - [ ] **CV is exactly 2 pages** - not 1, not 3
 - [ ] **No orphaned `\cventry` titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` before each `\cventry` to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
 - [ ] **Cover letter is exactly 1 page** - signature block must fit with the body, never overflow

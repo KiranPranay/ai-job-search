@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** mechanical design and CAD (Siemens NX, SolidWorks, Fusion 360), CFD/FEA (ANSYS Fluent, OpenFOAM), thermal and structural analysis, design for manufacturability (DFM), jigs/fixtures/test equipment, MIL-STD-810H / MIL-STD-461G qualification, manufacturing-line setup and automation
+**Moderate match areas:** Python/MATLAB/C++ scripting for engineering, IoT/embedded automation (ESP32, custom PCB), project and vendor management, R&D-to-production transition
+**Weak match areas:** pure software/web/app development, data-science/ML modelling as a primary role, non-mechanical domains
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** aerospace/defense thermal batteries, lithium battery manufacturing, high-temperature structural components, thermal/CFD simulation
+**Moderate:** general product/mechanical design, EV and energy storage, automotive, heavy engineering (steam turbines via BHEL), hydrogen fuel cells
+**Entry-level:** senior/lead or management-heavy roles (roughly 2-3 years of experience so far), pure-research PhD-level positions
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Grow into a senior mechanical/CAE design engineer in aerospace/defense or energy storage
+- Deepen CFD/FEA and thermal-simulation expertise, leveraging the in-progress M.Tech in Aerospace Engineering
+- Own product design end to end, from R&D through qualification to production
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: hands-on design and simulation, building systems from 0 to 1, solving thermal and structural problems, automation work
+- Tasks that drain: repetitive documentation, maintenance-only work, non-technical administrative tasks
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: [INFERRED] Early-career and growth-focused; currently employed full-time while finishing an M.Tech, so stability matters but is not the only driver
+- **Flexibility**: [INFERRED] Hyderabad-based; open to Bengaluru, Pune, Chennai and select remote/India-wide roles while completing the M.Tech
+- **Professional development**: [INFERRED] Prioritizes deepening CFD/FEA and thermal-simulation skills and owning design from R&D through qualification to production
 
 ### 6. Salary Benchmark (Optional)
 
@@ -129,7 +129,7 @@ Present the evaluation as:
 
 ### Company Research Checklist
 - [ ] Checked company website (mission, values, recent news)
-- [ ] Checked review sites (Glassdoor, Jobindex, etc.)
+- [ ] Checked review sites (Glassdoor, AmbitionBox, etc.)
 - [ ] Checked LinkedIn for team size, recent hires, connections
 - [ ] Checked media for restructuring, growth, or workplace issues
 - [ ] Identified network contacts who may know the team/manager

@@ -63,12 +63,13 @@ Also read the most recent existing CV and cover letter files for concrete struct
 - Read any existing `cv/main_*.tex` file as a LaTeX template reference
 - Read any existing `cover_letters/cover_*.tex` or `cover_letters/Cover_*.tex` file as a template reference
 
-### CV (`cv/main_<company>.tex`)
+### Resume (via the resume repo — see `CLAUDE.md` → "Resume Generation")
 - Always in **English**
-- Follow the moderncv/banking format from `05-cv-templates.md`
-- Tailor the profile statement and experience bullets to the specific role
-- Reframe skills and achievements to match job requirements
-- Keep to 2 pages
+- Create `/home/pranay/projects/resume/applications/<company>_<role-slug>/` with a tailored `resume.json` (copy `data/re.json`, reframe summary / skills order / experience bullets to the posting; never fabricate) and a `config.json` (`template` = `templates/spidy.tex`, `input_json` = this folder's `resume.json`, `output_basename` = `Pranay_Kiran_Resume_<Company>`, `outdir` = this folder)
+- Build from the resume repo root: `./applications/build.sh <slug>` → 2-page PDF
+- Bullet order: put a role's bullets in `impact` (render.py emits `impact` before `responsibilities`)
+- Also write `job.md` (the posting: description + an `**Apply:** <url>` line), `notes.md` (fit eval, requirement coverage, tailoring + honesty notes, status), and `interview.md` (role-specific prep; `##` groups, `###` questions become collapsible) in the folder. After building, `./applications/build.sh <slug>` regenerates the self-contained interactive `index.html` (job post + notes + interview + résumé + cover, tabbed/theme-aware, with a prominent Apply link) via `applications/make_index.py`
+- Legacy moderncv path (`cv/main_<company>.tex` via `05-cv-templates.md`) is a fallback only
 
 ### Cover Letter (`cover_letters/cover_<company>_<role>.tex`)
 - **Match the language of the job posting** (Danish posting -> Danish cover letter, English posting -> English cover letter)
@@ -182,11 +183,13 @@ After all edits are applied, the two files on disk are the final drafts.
 ### 5a. Compile
 
 ```bash
-cd cv && lualatex -interaction=nonstopmode main_<company>.tex
-cd ../cover_letters && xelatex -interaction=nonstopmode cover_<company>_<role>.tex
+# Resume (from the resume repo root, /home/pranay/projects/resume):
+./applications/build.sh <company>_<role-slug>
+# Cover letter (from this ai_job repo):
+cd cover_letters && xelatex -interaction=nonstopmode cover_<company>_<role>.tex
 ```
 
-- CV uses **lualatex** — pdflatex fails on modern MiKTeX with fontawesome5 font-expansion errors. lualatex handles the same sources cleanly.
+- Resume builds via `render.py` + **latexmk -xelatex** (the resume repo's `build.sh` cleans intermediates); it is single-column, so ATS reading order is safe. The built resume PDF stays in the application folder; also copy the built cover-letter PDF into that folder.
 - Cover letter uses **xelatex** — cover.cls requires fontspec.
 
 If either compile fails, fix the error and re-compile until clean.

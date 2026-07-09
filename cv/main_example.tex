@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Pranay Kiran
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -10,32 +9,40 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
-
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
-    pdfpagemode=FullScreen,
-}
+\usepackage{needspace}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
+% moderncv loads hyperref itself, so a second \usepackage{hyperref} triggers
+% "Option clash for package hyperref". Configure it with \hypersetup instead.
+% Both the hyperref config and the blue name/section-heading overrides are
+% deferred to \AtBeginDocument so they run after moderncv has defined its
+% style hooks (a bare \renewcommand*{\firstnamestyle} in the preamble errors
+% with "command undefined" on TeX Live). Default banking otherwise leaves the
+% name and section headings black, inconsistent with the blue accent scheme.
+\AtBeginDocument{%
+  \hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue,%
+    pdftitle={Pranay Kiran - CV},pdfpagemode=FullScreen}%
+  % moderncv 2.3.x on TeX Live styles the whole name through \namestyle; some
+  % MiKTeX builds instead expose \firstnamestyle/\lastnamestyle. \providecommand
+  % first makes each hook exist (harmless identity where the build doesn't use
+  % it), then \renewcommand paints it blue so the name matches the accent scheme.
+  \providecommand*{\namestyle}[1]{#1}%
+  \renewcommand*{\namestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \providecommand*{\firstnamestyle}[1]{#1}%
+  \renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \providecommand*{\lastnamestyle}[1]{#1}%
+  \renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}%
+  \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}%
+}
+
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Pranay}{Kiran}
+\address{Hyderabad, Telangana, India}{}{}
+\phone[mobile]{+91-9676504552}
+\email{kiranpranay12@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/pranaykiran/}{LinkedIn}, \href{https://github.com/KiranPranay}{GitHub}, \href{https://pranay.cottonseeds.org}{Portfolio}}
 
 \begin{document}
 
@@ -46,7 +53,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Mechanical design engineer specializing in defense and aerospace-grade lithium thermal batteries, with hands-on experience taking products from concept through CAD, simulation, and validated production. Combines strong CFD and FEA capability (thermal, structural, and fluid analysis) with practical design-for-manufacturability and MIL-STD qualification expertise. Currently pursuing an M.Tech in Aerospace Engineering to deepen domain knowledge alongside a full-time design and development role. Comfortable bridging design, manufacturing, and automation, with working proficiency in Python, MATLAB, and IoT-based process integration.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +63,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Mechanical Design \& CAD}: Siemens NX, SolidWorks, Fusion 360, AutoCAD, FreeCAD; tolerance stack-up, GD\&T.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{CFD \& FEA}: thermal, structural, fluid, vibration and fatigue analysis using ANSYS Fluent and OpenFOAM.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Manufacturing \& DFM}: jigs, fixtures, test equipment, production-line setup, inert glovebox and argon systems.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Standards \& Qualification}: MIL-STD-810H and MIL-STD-461G, environmental and qualification testing.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Programming \& Automation}: Python, MATLAB, C++, Git, Linux; IoT and ESP32-based process integration.
 
 \end{itemize}
 
@@ -77,32 +84,51 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2023--Present}{Design \& Development Engineer (Mechanical)}{Renewable Energy Systems Ltd}{Hyderabad, India}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Established a defense-grade lithium thermal battery manufacturing facility with inert gloveboxes, argon circulation, and controlled production processes compliant with MIL-STD-810H and MIL-STD-461G.
+    \item Developed repeatable, validated CFD/FEA simulation strategies for thermal and structural performance of battery components, reducing prototype iterations by 30\% and improving design-verification accuracy.
+    \item Digitized process parameters and production data to establish end-to-end design-to-production traceability, reducing manual effort and errors by 90\%.
+    \item Designed production jigs, fixtures, and test equipment; performs CAD modeling, tolerance stack-up, and FEA for high-temperature structural components.
+    \item Leads automation and IoT integration projects for inert glovebox and process systems to improve manufacturability.
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Intern}{Bharat Heavy Electricals Limited (BHEL)}{Hyderabad, India}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Trained in manufacturing processes and quality control for steam-turbine production.
+    \item Assisted in the design and analysis of turbine components using CAD and FEA tools.
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2021--2023}{General Secretary}{Service to Mankind (NGO)}{Hyderabad, India}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Established and led NGO operations supporting underprivileged children through educational and healthcare initiatives, facilitating 300+ blood donations and multiple medical-assistance programs.
+    \item Built the NGO's operational infrastructure: constitution, an open-source website, and an administrative dashboard with transparent donation tracking.
 \end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     SELECTED PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{Lithium Thermal Battery Manufacturing Line}: designed an end-to-end aerospace-compliant production line with gloveboxes, argon circulation, and robotic stations, with a repeatable validation methodology enabling in-house R\&D-to-production transition.
+
+\item \textbf{Thermal-Insulation Simulation (OpenFOAM, C++, Gmsh, Python)}: transient thermal models of a lithium thermal battery under high-temperature, cold-soak, and ambient conditions, studying insulator material and thickness and correlating results with experimental testing.
+
+\item \textbf{Robotic Arm \& Assembly Guidance System (ESP32, custom PCB, Python)}: IoT-based LED guidance and robotic sequencing for precision assembly, reducing operator dependency, eliminating assembly errors, and increasing throughput by 30\%.
 
 \end{itemize}
 
@@ -114,15 +140,12 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
+\needspace{3\baselineskip}
+\item{\cventry{Expected 2026}{M.Tech in Aerospace Engineering}{Malla Reddy College of Engineering and Technology}{Hyderabad, India}{}{}}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2019--2023}{B.Tech in Mechanical Engineering}{MLR Institute of Technology}{Hyderabad, India}{}{}}
 
 \end{itemize}
 
@@ -133,27 +156,7 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item English (professional), Telugu (native), Hindi (professional).
 \end{itemize}
 
 % ============================================================
