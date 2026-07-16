@@ -104,6 +104,7 @@ Resumes are generated from Pranay's polished JSON->LaTeX resume repo, **not** th
 - **Per-application folder:** `resume/applications/<company>_<role-slug>/` containing `resume.json` (tailored data), `config.json` (`outdir` = this folder), `job.md` (the posting text + an `**Apply:**` URL), `notes.md` (posting URL, fit eval, requirement coverage, tailoring + honesty notes, status), `interview.md` (role-specific interview prep), the built `<Name>_Resume_<Company>.{tex,pdf}` and `<Name>_CoverLetter_<Company>.{tex,pdf}` (cover letter authored in this ai_job repo, PDF copied in), and a generated `index.html` (self-contained interactive briefing: job post + notes + interview + résumé + cover, tabbed, theme-aware, with a prominent Apply link).
 - **Build:** from the resume repo root, `./applications/build.sh <slug>` (renders + compiles + cleans, then regenerates `index.html` via `applications/make_index.py`; `render.py` is stdlib-only, no venv needed).
 - **Bullet order:** `render.py` emits a role's `impact` list before its `responsibilities`; to control order, put bullets in `impact`.
+- **Tracker:** `resume/applications/index.html` is the master dashboard across all applications (status, fit, confirmations pending, next actions), generated from each package's `notes.md` by `applications/make_tracker.py` (chained into `build.sh`). When an application is submitted or gets a response, update the `- **Status:**` line in that package's `notes.md` and regenerate.
 - Full convention: `resume/applications/README.md`.
 
 ## Workflow for New Job Applications
