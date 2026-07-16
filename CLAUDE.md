@@ -48,10 +48,11 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - Built the NGO's operational infrastructure: constitution, an open-source website, and an administrative dashboard with transparent donation tracking.
 
 ### Technical Skills
-- **Primary:** Mechanical Design, Thermal & Fluid Systems, CFD, FEA, Design for Manufacturability (DFM)
-- **Secondary:** Automation & IoT integration, Tolerance stack-up, Vibration & Fatigue analysis, Project Management, Vendor Management, Regulatory Compliance (MIL-STD)
-- **Domain:** Defense/aerospace-grade lithium thermal batteries, MIL-STD-810H / MIL-STD-461G qualification, glovebox/argon inert systems, environmental qualification testing
-- **Software:** Siemens NX, SolidWorks, ANSYS Fluent, Fusion 360, FreeCAD, AutoCAD, OpenFOAM, MATLAB, Python, C++, Gmsh, Git, Linux
+<!-- Creo, CATIA, CAM, machining/welding knowledge, BOM release, and design docs/test plans confirmed by the candidate 2026-07-16 -->
+- **Primary:** Mechanical Design, CAD modelling and 2D manufacturing drawings (released with GD&T, tolerance stack-up, and BOM), Thermal & Fluid Systems, CFD, FEA, Design for Manufacturability (DFM)
+- **Secondary:** Tooling, jigs, material-handling and environmental test fixtures (qualified to 30G and above); machining processes (turning, milling, welding) specified and driven through fabrication vendors; CAM; design documents, test plans and structural analysis reports; Automation & IoT integration; Vibration & Fatigue analysis; Project Management; Vendor Management & sourcing; Regulatory Compliance (MIL-STD)
+- **Domain:** Defense/aerospace-grade lithium thermal batteries, MIL-STD-810H / MIL-STD-461G qualification, glovebox/argon inert systems, environmental qualification testing (test fixtures to 30G+)
+- **Software:** SolidWorks, Siemens NX, Creo, CATIA, AutoCAD, Fusion 360, FreeCAD, CAM; ANSYS Fluent, OpenFOAM, Gmsh; MATLAB, Python, C++, Git, Linux
 
 ### Certifications
 <!-- List relevant certifications with dates -->

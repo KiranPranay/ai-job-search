@@ -63,22 +63,33 @@ Hyderabad, India
 - **Linux**: development and simulation environment
 
 ### CAD
-- Siemens NX
+<!-- Creo, CATIA and CAM confirmed by the candidate 2026-07-16 -->
 - SolidWorks
-- ANSYS Fluent
+- Siemens NX
+- Creo
+- CATIA
+- AutoCAD
 - Fusion 360
 - FreeCAD
-- AutoCAD
+
+### Manufacturing & Drawings
+<!-- Confirmed by the candidate 2026-07-16 -->
+- 2D manufacturing drawings released with GD&T, tolerance stack-up, and Bill of Materials (BOM)
+- Machining processes: turning, milling, welding — specified and driven through fabrication vendors (he takes parts to vendors and gets them made to drawing)
+- CAM
+- Tooling, jigs, material-handling fixtures, and environmental test fixtures qualified to 30G and above
+- Design for Manufacturability (DFM)
 
 ### Analysis
 - Structural analysis (FEA)
-- Thermal and fluid analysis (CFD)
+- Thermal and fluid analysis (CFD) - ANSYS Fluent, OpenFOAM
 - Vibration and fatigue analysis
 - Tolerance stack-up
+- Design documents, test plans, and structural analysis reports
 
 ### Domain Expertise
 - Defense/aerospace-grade lithium thermal batteries
-- MIL-STD-810H / MIL-STD-461G qualification and environmental qualification testing
+- MIL-STD-810H / MIL-STD-461G qualification and environmental qualification testing (test fixtures qualified to 30G and above)
 - Design for Manufacturability (DFM) and glovebox/argon inert systems
 - Automation and IoT process integration
 
