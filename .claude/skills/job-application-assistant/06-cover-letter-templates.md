@@ -120,6 +120,15 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 
 ## Tailoring Guidelines
 
+### Expressive, achievement-led writing (make it show the work)
+A cover letter that only maps skills to requirements reads flat. Lead with what the candidate actually *did*, told as a specific, quantified story, then connect it forward to the employer's problem. This is "demonstrate, don't state" at full strength, and it stays compatible with the forward-looking rule in `03-writing-style.md`: open on a vivid achievement, then pivot to what it lets you do for them.
+
+- **Draw on the achievement bank.** The candidate's profile carries concrete, quantified wins (root-caused a failure and eliminated it; built a plant 0-to-1; a simulation validated to X%; a defect cut by Y%). Pick the **2-3 most relevant to this role** and tell them with the detail that makes them credible: the problem, what you changed, the number.
+- **Open on the flagship achievement, not "I am applying for...".** One clause of role framing is fine, but the first substantive thing should be a real accomplishment that matches the role's core need.
+- **Keep the metric, cut the abstraction.** "Root-caused hermetic-seal leak failures to the welding process, redesigned the heatsink, and eliminated the defect" beats "strong problem-solving skills."
+- **Honest and confidentiality-aware.** Use only numbers the candidate confirmed; never invent a specific (e.g. a MIL-STD leak-rate value); do not disclose classified/proprietary detail — generalize where a figure is sensitive.
+- Still obeys the hard limits: one page, ~250-300 words, no em-dashes, no cliches.
+
 ### Salutation
 - If you know the hiring manager's name: "Dear [First Last],"
 - If you know the team: "Dear [Company] hiring team,"

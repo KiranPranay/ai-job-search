@@ -65,8 +65,8 @@ Also read the most recent existing CV and cover letter files for concrete struct
 
 ### Resume (via the resume repo — see `CLAUDE.md` → "Resume Generation")
 - Always in **English**
-- Create `/home/pranay/projects/resume/applications/<company>_<role-slug>/` with a tailored `resume.json` (copy `data/re.json`, reframe summary / skills order / experience bullets to the posting; never fabricate) and a `config.json` (`template` = `templates/spidy.tex`, `input_json` = this folder's `resume.json`, `output_basename` = `Pranay_Kiran_Resume` — **company-neutral, never suffix the filename with the company**, recruiters see it; `outdir` = this folder). Name the cover-letter copy `Pranay_Kiran_CoverLetter.{tex,pdf}`
-- Build from the resume repo root: `./applications/build.sh <slug>` → 2-page PDF
+- **Applications live in the PRIVATE repo `/home/pranay/projects/job-applications/`** (never a public repo - packages hold defense detail + internal notes). Create `job-applications/applications/<company>_<role-slug>/` with a tailored `resume.json` (copy `data/re.json`, reframe summary / skills order / experience bullets to the posting; never fabricate; pull quantified wins from the RESL achievement-bank memory) and a `config.json` (`template` = `templates/spidy.tex`, `input_json` = this folder's `resume.json`, `output_basename` = `Pranay_Kiran_Resume` — **company-neutral, never suffix the filename with the company**, recruiters see it; `outdir` = this folder). Name the cover-letter copy `Pranay_Kiran_CoverLetter.{tex,pdf}`
+- Build from the job-applications repo root: `./applications/build.sh <slug>` → 2-page PDF
 - Bullet order: put a role's bullets in `impact` (render.py emits `impact` before `responsibilities`)
 - Also write `job.md` (the posting: description + an `**Apply:** <url>` line), `notes.md` (fit eval, requirement coverage, tailoring + honesty notes, status), and `interview.md` (role-specific prep; `##` groups, `###` questions become collapsible) in the folder. After building, `./applications/build.sh <slug>` regenerates the self-contained interactive `index.html` (job post + notes + interview + résumé + cover, tabbed/theme-aware, with a prominent Apply link) via `applications/make_index.py`
 - Legacy moderncv path (`cv/main_<company>.tex` via `05-cv-templates.md`) is a fallback only
@@ -183,7 +183,7 @@ After all edits are applied, the two files on disk are the final drafts.
 ### 5a. Compile
 
 ```bash
-# Resume (from the resume repo root, /home/pranay/projects/resume):
+# Resume (from the PRIVATE job-applications repo root, /home/pranay/projects/job-applications):
 ./applications/build.sh <company>_<role-slug>
 # Cover letter (from this ai_job repo):
 cd cover_letters && xelatex -interaction=nonstopmode cover_<company>_<role>.tex
