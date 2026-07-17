@@ -141,6 +141,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 ### Quality
 - [ ] No LaTeX syntax errors (balanced braces, correct commands)
 - [ ] No spelling or grammar errors
+- [ ] **De-AI / humaniser:** `python3 tools/humanize_check.py <cv/cover>` shows no `[tell]` items (buzzwords, em-dashes, AI cliches); rhythm and openers varied (see 03-writing-style.md "Humaniser layer")
 - [ ] Agentic coding / AI tooling references mention **Claude Code** by name
 - [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" if unknown)
 - [ ] Cover letter fits approximately one page

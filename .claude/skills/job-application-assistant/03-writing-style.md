@@ -13,6 +13,17 @@
    - **Never:** Claiming experience the candidate doesn't have; implying they worked in a domain they haven't.
    When a bullet falls in the "flag it" zone, present it to the user after drafting with: "This bullet is a stretch because X. Keep, soften, or drop?" If the evaluation experience match score is below 50, warn before proceeding to drafting that extensive reframing would be needed.
 
+## Humaniser layer (write like a person, not an AI)
+
+Honest content still gets distrusted when it *reads* like AI, and a recruiter (or a tool) may auto-reject on that smell alone. The goal is not to beat AI detectors (they are unreliable, and the content here is genuine) - it is to sound like the actual engineer wrote it. Run `tools/humanize_check.py <file>` on the finished resume and cover letter before shipping; fix every `[tell]`.
+
+- **The rule that beats all others: be specific.** Generic claims read as AI; concrete detail only a practitioner would know reads as human. "Root-caused hermetic-seal leaks to the welding process, redesigned the heatsink with fins, and added robotic welding" cannot be AI-slop. Use the real nouns, tools, numbers, and jargon from the achievement bank.
+- **Avoid the buzzword vocabulary** (the AI tell-tale words): leverage, spearhead, passionate, robust, seamless, cutting-edge, state-of-the-art, pivotal, meticulous, showcase, elevate, streamline, synergy, holistic, results-driven, detail-oriented, team player, proven track record, wheelhouse, harness, empower, unlock, at the forefront, wealth of experience. Use the plain verb: built, fixed, cut, ran, designed, drove.
+- **No em-dashes (—)** - the single strongest AI tell now; use a comma or period. Straight quotes, not curly. Easy on semicolons.
+- **Rhythm / burstiness.** AI writes every sentence the same length with smooth transitions; humans do not. Mix a short, punchy line with a longer one. A short fragment for emphasis is fine. Do not open every bullet with the same verb or word.
+- **Cut the transition scaffolding:** Furthermore, Moreover, Additionally, Notably. Real writing rarely needs them.
+- **Stay ATS-clean while humanising.** This is about voice, not tricks: never stuff hidden/white-text keywords, invisible unicode, or keyword walls - those cause automated rejection. Standard headings, real keywords earned by real experience, plain text.
+
 ## Tone
 - **Warm but direct.** Friendly and approachable, but confident without arrogance.
 - **Conversational professional.** Not stiff corporate-speak, not casual chat. Think: how a confident person talks in a good job interview.
