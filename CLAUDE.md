@@ -40,6 +40,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - Digitized process parameters and production data for end-to-end design-to-production traceability, reducing manual effort and errors by 90%.
   - Designed production jigs, fixtures, and test equipment for manufacturing and environmental qualification testing; develops CAD models, tolerance stack-up analyses, and FEA for high-temperature structural components.
   - Owns and maintains the AS9100 quality management system - implements procedures and corrective actions and represents the team through its quality audits (confirmed by Pranay 2026-07-20).
+  - Leads the design of production equipment, jigs, fixtures, and machines, and releases the fabrication/technical drawings (GD&T + industrial standards) that vendors manufacture from (lead-level design scope; formal title remains Design & Development Engineer - confirmed 2026-08-28).
+  - Developed **MusaCAD**, a self-built 2D CAD application (C++) and a FreeCAD-based fabrication-drawing pipeline (Python) that models 3D objects and assemblies and generates clean, standards-compliant fabrication drawings with correct symbols (github.com/MusaCAD - verified 2026-08-28).
   - Leads automation and IoT integration projects for inert glovebox and process systems to improve manufacturability.
 - **Intern** (2022) - **Bharat Heavy Electricals Limited (BHEL)** (India)
   - Trained in manufacturing processes and quality control for steam-turbine production.
@@ -53,7 +55,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Primary:** Mechanical Design, CAD modelling and 2D manufacturing drawings (released with GD&T, tolerance stack-up, and BOM), Thermal & Fluid Systems, CFD, FEA, Design for Manufacturability (DFM)
 - **Secondary:** Tooling, jigs, material-handling and environmental test fixtures (qualified to 30G and above); machining processes (turning, milling, welding) specified and driven through fabrication vendors; CAM; design documents, test plans and structural analysis reports; Automation & IoT integration; Vibration & Fatigue analysis; Project Management; Vendor Management & sourcing; Quality & Regulatory Compliance (MIL-STD-810H/461G; **AS9100 quality management system - owns/maintains the QMS, procedures, corrective actions, and audits**)
 - **Domain:** Defense/aerospace-grade lithium thermal batteries, MIL-STD-810H / MIL-STD-461G qualification, glovebox/argon inert systems, environmental qualification testing (test fixtures to 30G+)
-- **Software:** SolidWorks, Siemens NX, Creo, CATIA, AutoCAD, Fusion 360, FreeCAD, CAM; ANSYS Fluent, OpenFOAM, Gmsh; MATLAB, Python, C++, Git, Linux
+- **Software:** SolidWorks, Siemens NX, Creo, CATIA, AutoCAD, Fusion 360, FreeCAD, CAM; ANSYS Fluent, OpenFOAM, Gmsh; MATLAB, Python, C++, Git, Linux; **MusaCAD (self-built 2D CAD application in C++) + a FreeCAD-based fabrication-drawing pipeline (Python) — github.com/MusaCAD, verified 2026-08-28**
 
 ### Certifications
 <!-- List relevant certifications with dates -->
